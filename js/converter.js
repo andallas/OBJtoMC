@@ -105,7 +105,7 @@ var converter = (function(converter)
 					}
 					else
 					{
-						var string = "double u" + (Math.floor(i / 2) + 1) + " = (double)icon.getInterpolatedU(" + UVs[i] + "D);\n";
+						var string = "double u" + (Math.floor(i / 2) + 1) + " = (double)icon.getInterpolatedU(" + (UVs[i] * 16) + "D);\n";
 					}
 					uvString = uvString + string;
 				break;
@@ -121,7 +121,7 @@ var converter = (function(converter)
 					else
 					{
 						console.log(UVs[i]);
-						var string = "double v" + (Math.floor(i / 2) + 1) + " = (double)icon.getInterpolatedV(" + UVs[i] + "D);\n";
+						var string = "double v" + (Math.floor(i / 2) + 1) + " = (double)icon.getInterpolatedV(" + (UVs[i] * 16) + "D);\n";
 					}
 					uvString = uvString + string;
 				break;
